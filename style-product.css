@@ -4,6 +4,19 @@
   box-sizing: border-box;
 }
 
+:where(ul, ol) {
+    list-style: none;
+}
+  
+:where(img) {
+    max-width: 100%;
+    height: auto;
+}
+
+:where(a){
+    text-decoration: none;
+}
+
 h1 {
   color: #426696;
   font-weight: 600;
@@ -31,6 +44,7 @@ main {
   align-items: center;
   justify-content: center;
 }
+
 
 .glass {
   background: white;
@@ -93,6 +107,11 @@ link {
 }
 .link h2 {
   padding: 0rem 2rem;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
 }
 
 .games {

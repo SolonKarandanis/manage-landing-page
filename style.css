@@ -112,14 +112,13 @@ svg{
    scroll-behavior: auto;
   }
   
-  *,
-  *::before,
-  *::after {
+  :is(*,*::before,*::after){
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+  
 }
 
 
@@ -164,16 +163,15 @@ p[data-width="wide"]{
   box-shadow: none;
 }
 
-.button:hover,
-.button:focus-visible{
+.button:is(:hover,:focus-visible){
   background-color: var(--clr-accent-300);
 }
 
-.button[data-type="inverted"]:hover,
-.button[data-type="inverted"]:focus-visible{
+.button[data-type="inverted"]:is(:hover,:focus-visible){
   color: var(--clr-accent-300);
   background-color: var(--clr-neutral-100);
 }
+
 
 /* Navigation */
 .primary-header{
@@ -201,9 +199,7 @@ p[data-width="wide"]{
   color: var(--clr-primary-400);
   text-decoration: none;
 }
-
-.nav-list a:hover,
-.nav-list a:focus{
+.nav-list a:is(:hover,:focus){
   color: var(--clr-accent-400);
 }
 
